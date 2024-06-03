@@ -8,7 +8,7 @@
 <body>
     <script> 
       let dice = [];
-      function dice () {
+      function rolldice () {
         dice = [];
         for(let i = 0; i < 3; i++) {
           let dice_r = Math.floor(Math.random() * 5)+1;
@@ -17,10 +17,10 @@
         console.log(dice);
       }
       function button () {
-        dice();
+        rolldice();
         let playerdice = dice;
         window.alert("あなたの目は"+dice);
-        dice();
+        rolldice();
         window.alert("CPUの目は"+dice);
         if(playerdice[0] + playerdice[1] + playerdice[2] > dice[0] + dice[1] + dice[2]) { //尺が足りないならforeachを使う
           window.alert("あなたの勝ち");
