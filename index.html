@@ -7,23 +7,24 @@
 </head>
 <body>
     <script> 
-      function button () {
-        let dice = [];
+      let dice = [];
+      function dice () {
+        dice = [];
         for(let i = 0; i < 3; i++) {
-        let dice_r = Math.floor(Math.random() * 5)+1;
-        dice.push(dice_r);
-        }
-        window.alert(dice);
-        if(dice[0] === dice[1] === dice[2]) {
-            if(dice[0] === 1) {
-                window.alert("ビンゾロ");
-            } else {
-                window.alert("ゾロ目"+dice[0]);
-            }
-        } else if (dice[0] === dice[1] || dice[1] === dice[2] || dice[2] === dice[0]) {
-            window.alert("の目");
+          let dice_r = Math.floor(Math.random() * 5)+1;
+          dice.push(dice_r);
         }
       }
+      function button () {
+        dice();
+        let playerdice = dice;
+        window.alert("あなたの目は"+dice);
+        dice();
+        window.alert("CPUの目は"+dice);
+        if(playerdice[0] + playerdice[1] + playerdice[2] > dice[0] + dice[1] + dice[2]) { //尺が足りないならforeachを使う
+          window.alert("あなたの勝ち");
+      } else {
+          window.alert("あなたの負け");
     </script>
     <button onclick = "button()">サイコロを降る</button>
     <p id = "countid">count: 0</p>
