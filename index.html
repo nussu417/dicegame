@@ -14,6 +14,7 @@
           let dice_r = Math.floor(Math.random() * 5)+1;
           dice.push(dice_r);
         }
+        console.log(dice);
       }
       function button () {
         dice();
@@ -27,6 +28,5 @@
           window.alert("あなたの負け");
     </script>
     <button onclick = "button()">サイコロを降る</button>
-    <p id = "countid">count: 0</p>
 </body>
 </html>
