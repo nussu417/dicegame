@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>learn-js</title>
+</head>
+<body>
+    <script> 
+      function button () {
+        let dice = {};
+        for(let i = 0; i < 3; i++;) {
+        let dice_r = Math.floor(Math.random() * 6);
+        dice.push(dice_r);
+        }
+        window.alert(dice);
+      }
+    </script>
+    <button onclick = "button()">サイコロを降る</button>
+    <p id = "countid">count: 0</p>
+</body>
+</html>
