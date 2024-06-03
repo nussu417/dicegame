@@ -18,7 +18,7 @@
       }
       function button () {
         rolldice();
-        let playerdice = dice;
+        let playerdice = [...dice];
         window.alert("あなたの目は"+dice);
         rolldice();
         window.alert("CPUの目は"+dice);
