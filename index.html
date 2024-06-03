@@ -8,12 +8,21 @@
 <body>
     <script> 
       function button () {
-        let dice = {};
-        for(let i = 0; i < 3; i++;) {
-        let dice_r = Math.floor(Math.random() * 6);
+        let dice = [];
+        for(let i = 0; i < 3; i++) {
+        let dice_r = Math.floor(Math.random() * 5)+1;
         dice.push(dice_r);
         }
         window.alert(dice);
+        if(dice[0] === dice[1] === dice[2]) {
+            if(dice[0] === 1) {
+                window.alert("ビンゾロ");
+            } else {
+                window.alert("ゾロ目"+dice[0]);
+            }
+        } else if (dice[0] === dice[1] || dice[1] === dice[2] || dice[2] === dice[0]) {
+            window.alert("の目");
+        }
       }
     </script>
     <button onclick = "button()">サイコロを降る</button>
