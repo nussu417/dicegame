@@ -7,7 +7,7 @@
 </head>
 <body>
     <script> 
-      let dice = [1];
+      let dice = [];
       function rolldice () {
         dice = [];
         for(let i = 0; i < 3; i++) {
@@ -26,6 +26,8 @@
           window.alert("あなたの勝ち");
       } else {
           window.alert("あなたの負け");
+        }
+      }
     </script>
     <button onclick = "button()">サイコロを降る</button>
 </body>
